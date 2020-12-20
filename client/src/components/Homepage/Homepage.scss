@@ -1,0 +1,49 @@
+.Homepage {
+  background: url("https://images.unsplash.com/photo-1437751068958-82e6fccc9360?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fGJvb2tzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  img {
+    filter: invert(1);
+  }
+
+  h1 {
+    color: white;
+    padding-top: 250px;
+    margin-right: 40px;
+  }
+
+  .lead {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    background-color: #a80c03 !important;
+    border: none !important;
+    outline: none !important;
+
+    &:hover {
+      background-color: #c10e03 !important;
+    }
+  }
+
+  .btn {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  .login-button {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,39 @@
+.ShowStory {
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+
+  p {
+    word-break: break-all;
+  }
+
+  button {
+    background-color: #8f1f19;
+    border: none;
+    cursor: pointer;
+
+    a {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #c10e03;
+    }
+  }
+
+  .btn {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .edit-story {
+    margin-right: 10px;
+  }
+}
+
+.not-available {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 200px;
+}

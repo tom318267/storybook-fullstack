@@ -1,0 +1,18 @@
+.EditStory {
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  margin: 100px auto;
+
+  button {
+    background-color: #a80c03;
+    border: none;
+
+    &:hover {
+      background-color: #c10e03;
+    }
+  }
+
+  .btn {
+    box-shadow: none !important;
+  }
+}

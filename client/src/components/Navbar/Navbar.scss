@@ -1,0 +1,27 @@
+.Navbar {
+  ul.navbar-nav {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .fa-book-open {
+    position: relative;
+    top: 4px;
+  }
+
+  .bg-light {
+    background-color: #a80c03 !important;
+  }
+
+  a.navbar-brand {
+    color: white !important;
+  }
+
+  a.nav-link {
+    color: white !important;
+    margin-right: 15px;
+  }
+
+  button:focus {
+    outline: none !important;
+  }
+}

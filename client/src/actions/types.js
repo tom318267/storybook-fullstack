@@ -1,0 +1,14 @@
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+export const CLEAR_PROFILE = "CLEAR_PROFILE";
+export const GET_STORIES = "GET_STORIES";
+export const STORY_ERROR = "STORY_ERROR";
+export const GET_STORY = "GET_STORY";
+export const ADD_STORY = "ADD_STORY";
+export const UPDATE_STORY = "UPDATE_STORY";
+export const DELETE_STORY = "DELETE_STORY";

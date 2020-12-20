@@ -1,0 +1,25 @@
+.ContactForm {
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  margin: 100px auto;
+
+  .lead {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background-color: #a80c03;
+    border: none;
+
+    box-shadow: 1px 1px 1px;
+
+    &:hover {
+      background-color: #c10e03;
+    }
+  }
+
+  .btn {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+}
