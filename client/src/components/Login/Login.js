@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { login } from "../../actions/auth";
+import Swal from "sweetalert2";
 import "./Login.scss";
 
 const Login = ({ login, isAuthenticated }) => {
@@ -19,6 +20,18 @@ const Login = ({ login, isAuthenticated }) => {
     });
   };
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -26,6 +39,10 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
+    Toast.fire({
+      icon: "success",
+      title: "Successfully logged in",
+    });
     return <Redirect to="/stories" />;
   }
 
@@ -34,7 +51,6 @@ const Login = ({ login, isAuthenticated }) => {
       <h2 className="mb-3">Login</h2>
       <form onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <label htmlFor="email">Email address</label>
           <input
             onChange={(e) => onChange(e)}
             type="email"
@@ -42,13 +58,12 @@ const Login = ({ login, isAuthenticated }) => {
             id="email"
             name="email"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Email"
             value={email}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password</label>
           <input
             onChange={(e) => onChange(e)}
             type="password"

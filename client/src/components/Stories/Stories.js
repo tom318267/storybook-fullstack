@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getStories } from "../../actions/stories";
 import Story from "../Story/Story";
@@ -15,7 +14,7 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
     <Spinner />
   ) : (
     <div className="Stories text-center">
-      <h1>Your Stories</h1>
+      <h1>My Stories</h1>
       {stories.length > 0 ? (
         <div className="stories-container">
           {stories.map((story) => (

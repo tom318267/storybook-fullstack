@@ -40,7 +40,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </a>
       </li>
       <li onClick={logout} className="nav-item">
-        <a href="#!" className="nav-link" data-target=".navbar-collapse.show">
+        <a
+          href="/login"
+          className="nav-link"
+          data-target=".navbar-collapse.show"
+        >
           Logout
         </a>
       </li>

@@ -31,29 +31,30 @@ const AddStory = ({ addStory }) => {
   };
   return (
     <div className="AddStory">
-      <h1>Share Story</h1>
+      <h1>
+        <i class="fas fa-book"></i> Share Story
+      </h1>
+      <p className="lead">Tell us your story!</p>
       <form onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <label htmlFor="title">Your Title</label>
           <input
             onChange={(e) => onChange(e)}
             type="text"
             className="form-control"
             id="title"
             name="title"
-            placeholder="Enter title of your story"
+            placeholder="Title of Story"
             value={title}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="body">Your Story</label>
           <textarea
             onChange={(e) => onChange(e)}
             type="text"
             className="form-control"
             id="body"
             name="body"
-            placeholder="Tell us your story"
+            placeholder="Your Story"
             value={body}
           />
         </div>

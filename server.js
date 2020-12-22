@@ -14,6 +14,7 @@ app.use(cors());
 app.use("/auth", require("./routes/auth"));
 app.use("/users", require("./routes/users"));
 app.use("/stories", require("./routes/stories"));
+app.use("/contact", require("./routes/contact"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));

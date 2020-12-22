@@ -9,8 +9,20 @@ import {
   LOGOUT,
   CLEAR_PROFILE,
 } from "./types";
-
+import Swal from "sweetalert2";
 import setAuthToken from "../utils/setAuthToken";
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer);
+    toast.addEventListener("mouseleave", Swal.resumeTimer);
+  },
+});
 
 // Load user
 export const loadUser = () => async (dispatch) => {
@@ -76,6 +88,10 @@ export const login = (email, password) => async (dispatch) => {
 
     dispatch(loadUser());
   } catch (err) {
+    Toast.fire({
+      icon: "error",
+      title: "Wrong Credentials",
+    });
     dispatch({
       type: LOGIN_FAIL,
     });
@@ -89,5 +105,9 @@ export const logout = () => (dispatch) => {
   });
   dispatch({
     type: LOGOUT,
+  });
+  Toast.fire({
+    icon: "success",
+    title: "You have logged out",
   });
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import { register } from "../../actions/auth";
+import Swal from "sweetalert2";
 import "./SignUp.scss";
 
 const SignUp = ({ register, isAuthenticated }) => {
@@ -21,17 +22,36 @@ const SignUp = ({ register, isAuthenticated }) => {
     });
   };
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords don't match");
+      Toast.fire({
+        icon: "error",
+        title: "Wrong Credentials",
+      });
     } else {
       register({ name, email, password });
     }
   };
 
   if (isAuthenticated) {
+    Toast.fire({
+      icon: "success",
+      title: "Successfully registered",
+    });
     return <Redirect to="/stories" />;
   }
 
@@ -40,20 +60,18 @@ const SignUp = ({ register, isAuthenticated }) => {
       <h2 className="mb-3">Sign Up</h2>
       <form onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
           <input
             onChange={(e) => onChange(e)}
             type="text"
             className="form-control"
             id="name"
             name="name"
-            placeholder="Enter name"
+            placeholder="Name"
             value={name}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email address</label>
           <input
             onChange={(e) => onChange(e)}
             type="email"
@@ -61,7 +79,7 @@ const SignUp = ({ register, isAuthenticated }) => {
             id="email"
             name="email"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Email"
             value={email}
             required
           />
@@ -70,7 +88,6 @@ const SignUp = ({ register, isAuthenticated }) => {
           </small>
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password</label>
           <input
             onChange={(e) => onChange(e)}
             type="password"
@@ -83,7 +100,6 @@ const SignUp = ({ register, isAuthenticated }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             onChange={(e) => onChange(e)}
             type="password"

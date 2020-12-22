@@ -64,7 +64,7 @@ router.post(
       });
 
       const story = await newStory.save();
-      console.log(story);
+
       res.json(story);
     } catch (err) {
       console.error(err.message);

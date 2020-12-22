@@ -15,4 +15,9 @@
   .btn {
     box-shadow: none !important;
   }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #a80c03;
+  }
 }
