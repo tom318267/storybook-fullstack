@@ -25,6 +25,11 @@
     &:hover {
       background-color: #c10e03;
     }
+
+    &:active {
+      background-color: #a51414 !important;
+      box-shadow: none !important;
+    }
   }
 
   .btn {

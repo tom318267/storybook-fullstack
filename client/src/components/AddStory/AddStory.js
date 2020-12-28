@@ -31,9 +31,9 @@ const AddStory = ({ addStory }) => {
   };
   return (
     <div className="AddStory">
-      <h1>
+      <h2>
         <i class="fas fa-book"></i> Share Story
-      </h1>
+      </h2>
       <p className="lead">Tell us your story!</p>
       <form onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
@@ -45,6 +45,7 @@ const AddStory = ({ addStory }) => {
             name="title"
             placeholder="Title of Story"
             value={title}
+            required
           />
         </div>
         <div className="form-group">
@@ -56,6 +57,7 @@ const AddStory = ({ addStory }) => {
             name="body"
             placeholder="Your Story"
             value={body}
+            required
           />
         </div>
         <button

@@ -1,3 +1,20 @@
 .Story {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  a {
+    display: block;
+    color: #7c1313;
+  }
+
+  .card-header {
+    h5 {
+      font-family: "Damion", cursive;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    word-break: break-all;
+  }
 }

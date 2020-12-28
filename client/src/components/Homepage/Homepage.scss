@@ -18,7 +18,7 @@
     padding-top: 250px;
     margin-right: 40px;
     position: absolute;
-    top: 20px;
+    top: -139px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
@@ -28,6 +28,14 @@
     top: 235px;
     background: #7c1313;
     box-shadow: 12px 13px 15px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #c10e03;
+    }
+
+    &:active {
+      background-color: #a51414 !important;
+    }
   }
 
   .circle {

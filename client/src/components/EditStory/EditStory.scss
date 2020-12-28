@@ -2,6 +2,18 @@
   font-family: "Montserrat", sans-serif;
   width: 80%;
   margin: 100px auto;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: #7c1313;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  h2 {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
 
   button {
     background-color: #a80c03;
@@ -9,6 +21,10 @@
 
     &:hover {
       background-color: #c10e03;
+    }
+
+    &:active {
+      background-color: #a51414 !important;
     }
   }
 

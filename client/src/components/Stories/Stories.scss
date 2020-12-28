@@ -3,6 +3,9 @@
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   margin-top: 75px;
+  background-color: #7c1313;
+  border-radius: 25px;
+  padding: 40px;
 
   h1 {
     margin-bottom: 40px;
@@ -17,6 +20,10 @@
     .card-header {
       background-color: #a80c03;
       color: white;
+
+      &:first-child {
+        border-radius: unset;
+      }
     }
   }
 

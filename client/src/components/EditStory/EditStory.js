@@ -40,7 +40,7 @@ const EditStory = ({
   };
   return (
     <div className="EditStory">
-      <h1>Share Story</h1>
+      <h2>Share Story</h2>
       <form onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
           <label htmlFor="title">Your Title</label>

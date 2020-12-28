@@ -5,7 +5,7 @@ import "./Homepage.scss";
 const Homepage = () => {
   return (
     <div className="Homepage">
-      <div className="listening-container">
+      <div className="listening-container animate__animated animate__fadeInLeft">
         <div className="line"></div>
         <h1>
           We're listening, <br />
@@ -56,8 +56,7 @@ const Homepage = () => {
           <i class="fas fa-comment"></i>
           <h5>Comment</h5>
           <p>
-            Comment on any story you would
-            <br /> like. If you see a story that inspires
+            If you see a story that inspires
             <br /> you or you enjoy let that author
             <br /> know!
           </p>

@@ -1,7 +1,19 @@
 .ShowStory {
-  margin-top: 100px;
+  width: 80%;
+  margin: 100px auto;
+  border-radius: 25px;
+  border: 10px solid #7c1313;
+  padding: 40px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  h1 {
+    font-family: "Damion", cursive;
+    color: black;
+  }
 
   p {
+    color: black;
     word-break: break-all;
   }
 
@@ -22,6 +34,7 @@
   }
 
   .btn {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     &:focus {
       box-shadow: none !important;
     }

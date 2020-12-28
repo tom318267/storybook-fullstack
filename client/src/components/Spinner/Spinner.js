@@ -7,7 +7,7 @@ const Spinner = () => {
     <Loader
       style={{ textAlign: "center", marginTop: "300px" }}
       type="Rings"
-      color="#a80c03"
+      color="white"
       height={100}
       width={100}
       timeout={3000} //3 secs
