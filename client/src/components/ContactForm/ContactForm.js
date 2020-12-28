@@ -63,9 +63,9 @@ const ContactForm = () => {
   };
   return (
     <div className="ContactForm">
-      <h1>
+      <h2>
         <i className="fas fa-paper-plane"></i> Contact Us
-      </h1>
+      </h2>
       <p className="lead">
         Let us know what you think! In order to provide better service, please
         do not hesitate to give us your feedback. Thank you.

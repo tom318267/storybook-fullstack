@@ -89,9 +89,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
   return (
     <div className="Navbar">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
         <a className="navbar-brand" href="/">
-          <i className="fas fa-book-open"></i>
+          <h2>
+            Story<span className="book">Book</span>
+          </h2>
         </a>
         <button
           className="navbar-toggler"

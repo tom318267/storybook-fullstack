@@ -2,10 +2,18 @@
   font-family: "Montserrat", sans-serif;
   width: 80%;
   margin: 100px auto;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: #7c1313;
+
+  h2 {
+    color: white;
+  }
 
   .lead {
     font-size: 1rem;
     margin-bottom: 30px;
+    color: white;
   }
 
   button {
@@ -26,5 +34,9 @@
   .form-control:focus {
     box-shadow: none;
     border-color: #a80c03;
+  }
+
+  textarea {
+    height: 200px;
   }
 }

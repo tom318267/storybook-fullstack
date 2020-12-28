@@ -2,6 +2,9 @@
   font-family: "Montserrat", sans-serif;
   width: 80%;
   margin: 100px auto;
+  background-color: #7c1313;
+  border-radius: 25px;
+  padding: 40px;
 
   button {
     background-color: #a80c03;
@@ -10,6 +13,24 @@
     &:hover {
       background-color: #c10e03;
     }
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  small {
+    color: white !important;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
   }
 
   .btn {

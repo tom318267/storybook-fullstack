@@ -1,22 +1,52 @@
 .Login {
   width: 80%;
   margin: 100px auto;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: #7c1313;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  h2,
+  h5 {
+    color: white;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
 
   button {
-    background-color: #a80c03;
-    border: none;
+    background-color: #a51414;
+    color: white;
+    border: black;
 
     &:hover {
       background-color: #c10e03;
     }
+
+    &:active {
+      background-color: #a51414 !important;
+    }
   }
 
   .btn {
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+
+  .form-control {
+    line-height: 2;
   }
 
   .form-control:focus {
     box-shadow: none;
-    border-color: #a80c03;
+    border-color: #7c1313;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
   }
 }

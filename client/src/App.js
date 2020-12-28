@@ -11,7 +11,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import { loadUser } from "./actions/auth";
 import { LOGOUT } from "./actions/types";
 import PrivateRoute from "./routing/PrivateRoute";
-import "./App.css";
+import "./App.scss";
 
 // Redux
 import { Provider } from "react-redux";
@@ -34,21 +34,23 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Provider store={store}>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/sign-up" component={SignUp} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/contact" component={ContactForm} />
-            <PrivateRoute exact path="/stories" component={Stories} />
-            <PrivateRoute exact path="/stories/:id" component={ShowStory} />
-            <PrivateRoute exact path="/add-story" component={AddStory} />
-            <PrivateRoute exact path="/edit/:id" component={EditStory} />
-          </Switch>
-        </Router>
-      </Provider>
+      <div className="overlay">
+        <Provider store={store}>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/sign-up" component={SignUp} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/contact" component={ContactForm} />
+              <PrivateRoute exact path="/stories" component={Stories} />
+              <PrivateRoute exact path="/stories/:id" component={ShowStory} />
+              <PrivateRoute exact path="/add-story" component={AddStory} />
+              <PrivateRoute exact path="/edit/:id" component={EditStory} />
+            </Switch>
+          </Router>
+        </Provider>
+      </div>
     </div>
   );
 };
