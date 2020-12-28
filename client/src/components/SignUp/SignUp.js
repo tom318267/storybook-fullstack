@@ -51,6 +51,7 @@ const SignUp = ({ register, isAuthenticated }) => {
     Toast.fire({
       icon: "success",
       title: "Successfully registered",
+      iconColor: "#7c1313",
     });
     return <Redirect to="/stories" />;
   }

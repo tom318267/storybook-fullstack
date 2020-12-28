@@ -24,6 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
     toast: true,
     position: "top-end",
     showConfirmButton: false,
+    iconColor: "#7c1313",
     timer: 3000,
     timerProgressBar: true,
     didOpen: (toast) => {
