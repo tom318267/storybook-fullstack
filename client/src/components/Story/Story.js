@@ -12,7 +12,6 @@ const Story = ({ userInfo, story: { title, body, _id, createdAt, user } }) => {
         <h5>{title}</h5>
       </div>
       <div className="card-body">
-        {/* <p className="card-text">{body}</p> */}
         <TextTruncate line={1} element="p" truncateText="..." text={body} />
         <Link to={`/stories/${_id}`}>Read more</Link>
       </div>

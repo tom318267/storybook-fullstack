@@ -12,3 +12,6 @@ export const GET_STORY = "GET_STORY";
 export const ADD_STORY = "ADD_STORY";
 export const UPDATE_STORY = "UPDATE_STORY";
 export const DELETE_STORY = "DELETE_STORY";
+export const UPDATE_LIKES = "UPDATE_LIKES";
+export const ADD_COMMENT = "ADD_COMMENT";
+export const REMOVE_COMMENT = "REMOVE_COMMENT";

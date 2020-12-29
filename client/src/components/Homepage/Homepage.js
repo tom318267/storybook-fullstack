@@ -11,7 +11,7 @@ const Homepage = () => {
           We're listening, <br />
           tell us your story!
         </h1>
-        <Link to="/login">
+        <Link to="/sign-up">
           <button className="btn btn-primary get-started">Get Started</button>
         </Link>
         <div className="circle">

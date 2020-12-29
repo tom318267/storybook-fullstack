@@ -7,6 +7,8 @@ import {
   ADD_STORY,
   UPDATE_STORY,
   DELETE_STORY,
+  UPDATE_LIKES,
+  ADD_COMMENT,
 } from "./types";
 
 // Get stories
@@ -92,6 +94,67 @@ export const deleteStory = (id) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
+    });
+  }
+};
+
+// Add like
+export const addLike = (id) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/stories/like/${id}`);
+
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: { id, likes: res.data },
+    });
+  } catch (err) {
+    dispatch({
+      type: STORY_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Remove like
+export const removeLike = (id) => async (dispatch) => {
+  try {
+    const res = await axios.put(`/stories/unlike/${id}`);
+
+    dispatch({
+      type: UPDATE_LIKES,
+      payload: { id, likes: res.data },
+    });
+  } catch (err) {
+    dispatch({
+      type: STORY_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Add comment
+export const addComment = (storyId, formData) => async (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const res = await axios.post(
+      `/stories/comment/${storyId}`,
+      formData,
+      config
+    );
+
+    dispatch({
+      type: ADD_COMMENT,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: STORY_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
     });
   }
 };
