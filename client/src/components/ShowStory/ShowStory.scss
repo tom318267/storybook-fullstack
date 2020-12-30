@@ -7,14 +7,27 @@
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+  @media screen and (max-width: 425px) {
+    width: 90%;
+    padding: 20px;
+  }
+
   h1 {
     font-family: "Damion", cursive;
     color: black;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.8rem;
+    }
   }
 
   p {
     color: black;
     word-break: break-all;
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   button {
@@ -31,11 +44,23 @@
     &:hover {
       background-color: #c10e03;
     }
+
+    &:active {
+      background-color: #a51414 !important;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   .like-dislike-comment {
     button {
       margin-right: 10px;
+    }
+
+    @media screen and (max-width: 425px) {
+      margin-bottom: 35px;
     }
   }
 
@@ -52,6 +77,12 @@
 
   .edit-delete-div {
     display: flex;
+
+    button {
+      @media screen and (max-width: 425px) {
+        font-size: 0.6rem;
+      }
+    }
   }
 
   .story-container {
@@ -62,6 +93,18 @@
     padding: 20px;
     box-shadow: rgba(97, 22, 22, 0.48) 6px 2px 16px 0px,
       rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+    h4 {
+      @media screen and (max-width: 425px) {
+        font-size: 1rem;
+      }
+    }
+
+    small {
+      @media screen and (max-width: 425px) {
+        font-size: 0.6rem;
+      }
+    }
   }
 
   .comment-name {
@@ -72,6 +115,12 @@
   .go-back {
     display: flex;
     margin-top: 40px;
+  }
+
+  i.fas.fa-trash-alt {
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 }
 

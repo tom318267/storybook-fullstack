@@ -24,7 +24,8 @@ const ShowStory = ({
 }) => {
   useEffect(() => {
     getStory(match.params.id);
-  }, []);
+  }, [getStory, match.params.id]);
+
   return story ? (
     <div className="ShowStory text-center">
       <div className="edit-delete-div">
@@ -44,20 +45,21 @@ const ShowStory = ({
             </button>
           </>
         ) : null}
+
         {story.user._id !== user.user._id && (
           <div className="like-dislike-comment">
             <button
-              onClick={(e) => addLike(story._id)}
+              onClick={() => addLike(story._id)}
               className="btn btn-primary"
             >
-              <i class="fas fa-thumbs-up"></i>
+              <i className="fas fa-thumbs-up"></i>
               {story.likes.length > 0 && <span> {story.likes.length}</span>}
             </button>
             <button
-              onClick={(e) => removeLike(story._id)}
+              onClick={() => removeLike(story._id)}
               className="btn btn-primary"
             >
-              <i class="fas fa-thumbs-down"></i>
+              <i className="fas fa-thumbs-down"></i>
             </button>
             <Link to={`/comment/${story._id}`}>
               <button className="btn btn-primary comment-link">
@@ -78,7 +80,7 @@ const ShowStory = ({
           <div key={comment._id} className="comment-box">
             <h4 style={{ color: "#7c1313" }} className="comment-name">
               <span>
-                <i class="fas fa-user-circle"></i>
+                <i className="fas fa-user-circle"></i>
               </span>{" "}
               {comment.name}{" "}
               {user.user._id === comment.user && (
@@ -104,7 +106,7 @@ const ShowStory = ({
       <div className="go-back">
         <Link to="/stories">
           <button className="btn btn-primary">
-            <i class="fas fa-arrow-left"></i> Go Back
+            <i className="fas fa-arrow-left"></i> Go Back
           </button>
         </Link>
       </div>

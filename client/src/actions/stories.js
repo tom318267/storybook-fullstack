@@ -31,7 +31,6 @@ export const getStories = () => async (dispatch) => {
 export const getStory = (id) => async (dispatch) => {
   try {
     const res = await axios.get(`/stories/${id}`);
-    console.log(res);
     dispatch({
       type: GET_STORY,
       payload: res.data,

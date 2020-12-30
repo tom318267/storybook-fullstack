@@ -6,6 +6,10 @@
   a {
     display: block;
     color: #7c1313;
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   .card-header {
@@ -14,6 +18,16 @@
       font-size: 2.5rem;
       margin-bottom: 0;
       text-shadow: 1px 1px 1px black;
+
+      @media screen and (max-width: 425px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .story-truncate {
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
     }
   }
 

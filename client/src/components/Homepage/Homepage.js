@@ -15,7 +15,7 @@ const Homepage = () => {
           <button className="btn btn-primary get-started">Get Started</button>
         </Link>
         <div className="circle">
-          <i class="fas fa-quote-left"></i>
+          <i className="fas fa-quote-left"></i>
           <h5>
             "Storybook is a great
             <br /> way to share your
@@ -29,7 +29,7 @@ const Homepage = () => {
 
       <div className="white-container">
         <div className="submit-story">
-          <i class="fas fa-book-open"></i>
+          <i className="fas fa-book-open"></i>
           <h5>Submit Story</h5>
           <p>
             Inspire others with your
@@ -41,7 +41,7 @@ const Homepage = () => {
         <span className="divider"></span>
 
         <div className="help-others">
-          <i class="fas fa-handshake"></i>
+          <i className="fas fa-handshake"></i>
           <h5>Help Others</h5>
           <p>
             People may learn from your story.
@@ -53,7 +53,7 @@ const Homepage = () => {
         <span className="divider"></span>
 
         <div className="comment">
-          <i class="fas fa-comment"></i>
+          <i className="fas fa-comment"></i>
           <h5>Comment</h5>
           <p>
             If you see a story that inspires

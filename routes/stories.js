@@ -11,7 +11,6 @@ const User = require("../models/User");
 router.get("/", auth, async (req, res) => {
   try {
     const stories = await Story.find().sort({ date: -1 });
-    console.log(stories);
     res.json(stories);
   } catch (err) {
     console.error(err.message);

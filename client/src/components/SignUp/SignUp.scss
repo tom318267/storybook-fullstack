@@ -6,6 +6,17 @@
   border-radius: 25px;
   padding: 40px;
 
+  @media screen and (max-width: 425px) {
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  input {
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
+  }
+
   button {
     background-color: #a80c03;
     border: none;
@@ -13,15 +24,27 @@
     &:hover {
       background-color: #c10e03;
     }
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   h2 {
     color: white;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.6rem;
+    }
   }
 
   h5 {
     font-size: 1.1rem;
     color: white;
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.7rem;
+    }
   }
 
   small {

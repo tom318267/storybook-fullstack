@@ -27,8 +27,6 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
 };
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
-
   stories: state.stories,
 });
 

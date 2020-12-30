@@ -6,14 +6,38 @@
   padding: 40px;
   background-color: #7c1313;
 
+  @media screen and (max-width: 425px) {
+    margin: 50px auto;
+  }
+
   h2 {
     color: white;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.6rem;
+    }
+
+    i {
+      @media screen and (max-width: 425px) {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   .lead {
     font-size: 1rem;
     margin-bottom: 30px;
     color: white;
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.7rem;
+    }
+  }
+
+  input {
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   button {
@@ -30,6 +54,10 @@
       background-color: #a51414 !important;
       box-shadow: none !important;
     }
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 
   .btn {
@@ -43,5 +71,9 @@
 
   textarea {
     height: 200px;
+
+    @media screen and (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 }

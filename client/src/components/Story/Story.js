@@ -11,7 +11,13 @@ const Story = ({ story: { title, body, _id } }) => {
         <h5>{title}</h5>
       </div>
       <div className="card-body">
-        <TextTruncate line={1} element="p" truncateText="..." text={body} />
+        <TextTruncate
+          className="story-truncate"
+          line={1}
+          element="p"
+          truncateText="..."
+          text={body}
+        />
         <Link to={`/stories/${_id}`}>Read more</Link>
       </div>
     </div>
