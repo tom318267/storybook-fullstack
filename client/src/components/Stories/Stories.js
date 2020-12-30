@@ -14,7 +14,7 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
     <Spinner />
   ) : (
     <div className="Stories text-center">
-      <h1>My Stories</h1>
+      <h1>Story Feed</h1>
       {stories.length > 0 ? (
         <div className="stories-container">
           {stories.map((story) => (
@@ -28,7 +28,7 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
-  auth: state.auth,
+
   stories: state.stories,
 });
 

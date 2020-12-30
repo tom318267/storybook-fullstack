@@ -1,5 +1,4 @@
 import axios from "axios";
-import { loadUser } from "./auth";
 import {
   GET_STORIES,
   GET_STORY,
@@ -9,6 +8,7 @@ import {
   DELETE_STORY,
   UPDATE_LIKES,
   ADD_COMMENT,
+  REMOVE_COMMENT,
 } from "./types";
 
 // Get stories
@@ -105,8 +105,9 @@ export const addLike = (id) => async (dispatch) => {
 
     dispatch({
       type: UPDATE_LIKES,
-      payload: { id, likes: res.data },
+      payload: { id, likes: res.data.likes },
     });
+    window.location = `/stories/${id}`;
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
@@ -124,6 +125,8 @@ export const removeLike = (id) => async (dispatch) => {
       type: UPDATE_LIKES,
       payload: { id, likes: res.data },
     });
+
+    window.location = `/stories/${id}`;
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
@@ -150,6 +153,23 @@ export const addComment = (storyId, formData) => async (dispatch) => {
     dispatch({
       type: ADD_COMMENT,
       payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: STORY_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Delete comment
+export const deleteComment = (storyId, commentId) => async (dispatch) => {
+  try {
+    await axios.delete(`/stories/comment/${storyId}/${commentId}`);
+
+    dispatch({
+      type: REMOVE_COMMENT,
+      payload: commentId,
     });
   } catch (err) {
     dispatch({

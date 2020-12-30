@@ -1,0 +1,41 @@
+.CommentForm {
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+  margin: 100px auto;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: #7c1313;
+
+  h2 {
+    color: white;
+  }
+
+  button {
+    background-color: #a80c03;
+    border: none;
+
+    box-shadow: 1px 1px 1px;
+
+    &:hover {
+      background-color: #c10e03;
+    }
+
+    &:active {
+      background-color: #a51414 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .btn {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #a80c03;
+  }
+
+  textarea {
+    height: 200px;
+  }
+}

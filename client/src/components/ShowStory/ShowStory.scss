@@ -33,6 +33,12 @@
     }
   }
 
+  .like-dislike-comment {
+    button {
+      margin-right: 10px;
+    }
+  }
+
   .btn {
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     &:focus {
@@ -42,6 +48,30 @@
 
   .edit-story {
     margin-right: 10px;
+  }
+
+  .edit-delete-div {
+    display: flex;
+  }
+
+  .story-container {
+    margin-bottom: 80px;
+  }
+
+  .comment-container {
+    padding: 20px;
+    box-shadow: rgba(97, 22, 22, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  }
+
+  .comment-name {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .go-back {
+    display: flex;
+    margin-top: 40px;
   }
 }
 

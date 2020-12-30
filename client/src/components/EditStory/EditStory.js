@@ -9,8 +9,6 @@ const EditStory = ({
   updateStory,
   match,
 }) => {
-  console.log("Story", story);
-  console.log("loading", loading);
   const [form, setForm] = useState({
     title: "",
     body: "",

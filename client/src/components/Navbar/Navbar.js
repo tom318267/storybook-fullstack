@@ -27,7 +27,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           href="/stories"
           data-target=".navbar-collapse.show"
         >
-          My Stories
+          Story Feed
         </a>
       </li>
       <li className="nav-item">

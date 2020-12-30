@@ -1,43 +1,33 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { addComment } from "../../actions/stories";
+import "./CommentForm.scss";
 
-const CommentForm = () => {
+const CommentForm = ({ history, match, addComment }) => {
   const [text, setText] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
+    addComment(match.params.id, { text });
+    setText("");
+    history.push(`/stories/${match.params.id}`);
   };
 
   return (
     <div className="CommentForm">
       <h2>
-        <i className="fas fa-paper-plane"></i> Contact Us
+        <i className="fas fa-comment-dots"></i> Comment
       </h2>
-      <p className="lead">
-        Let us know what you think! In order to provide better service, please
-        do not hesitate to give us your feedback. Thank you.
-      </p>
 
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <input
-            onChange={(e) => onChange(e)}
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            placeholder="Name"
-            value={name}
-          />
-        </div>
-        <div className="form-group">
           <textarea
-            onChange={(e) => onChange(e)}
+            onChange={(e) => setText(e.target.value)}
             type="text"
             className="form-control"
-            id="comment"
-            name="comment"
+            name="text"
             placeholder="Your comment"
-            value={comment}
+            value={text}
           />
         </div>
         <button type="submit" className="btn btn-primary">
@@ -48,4 +38,4 @@ const CommentForm = () => {
   );
 };
 
-export default CommentForm;
+export default connect(null, { addComment })(CommentForm);

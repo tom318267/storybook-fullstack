@@ -18,6 +18,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import setAuthToken from "./utils/setAuthToken";
 import EditStory from "./components/EditStory/EditStory";
+import CommentForm from "./components/CommentForm/CommentForm";
 
 const App = () => {
   useEffect(() => {
@@ -47,6 +48,7 @@ const App = () => {
               <PrivateRoute exact path="/stories/:id" component={ShowStory} />
               <PrivateRoute exact path="/add-story" component={AddStory} />
               <PrivateRoute exact path="/edit/:id" component={EditStory} />
+              <PrivateRoute exact path="/comment/:id" component={CommentForm} />
             </Switch>
           </Router>
         </Provider>
