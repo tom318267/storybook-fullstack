@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { addComment } from "../../actions/stories";
 import "./CommentForm.scss";
 
@@ -30,9 +31,21 @@ const CommentForm = ({ history, match, addComment }) => {
             value={text}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <div className="buttons-div">
+          <Link to={`/stories/${match.params.id}`}>
+            <button
+              style={{ marginRight: "10px" }}
+              type="submit"
+              className="btn btn-primary"
+            >
+              Go Back
+            </button>
+          </Link>
+
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
