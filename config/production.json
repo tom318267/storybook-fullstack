@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://tom123:tom123@storybook-fullstack.gqkns.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "mailgunApiKey": "f6f9713be0087d69501d14dfdaa596c4-b6190e87-7af8ba84",
+    "domain": "sandboxeed29b0d519d43be927cf3e37acab96a.mailgun.org"
+
+}
