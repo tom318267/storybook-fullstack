@@ -111,11 +111,7 @@ const ShowStory = ({
         </Link>
       </div>
     </div>
-  ) : (
-    <div>
-      <h2 className="not-available text-center">Story not available</h2>
-    </div>
-  );
+  ) : null;
 };
 
 const mapStateToProps = (state) => ({
