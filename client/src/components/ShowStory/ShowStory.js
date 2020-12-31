@@ -24,7 +24,7 @@ const ShowStory = ({
 }) => {
   useEffect(() => {
     getStory(match.params.id);
-  }, [getStory, story, match.params.id]);
+  }, [getStory, match.params.id]);
 
   return story ? (
     <div className="ShowStory text-center">
