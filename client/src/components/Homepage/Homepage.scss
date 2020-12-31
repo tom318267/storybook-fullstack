@@ -3,6 +3,8 @@
 
   .listening-container {
     padding: 0 20px;
+    position: relative;
+    bottom: 40px;
   }
 
   .line {
@@ -471,7 +473,7 @@
       }
 
       h5 {
-        font-size: 0.7rem;
+        font-size: 1.5rem;
         position: relative;
         top: 45px;
         left: 39px;
