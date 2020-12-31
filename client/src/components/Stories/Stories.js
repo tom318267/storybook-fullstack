@@ -10,7 +10,7 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
     getStories();
   }, []);
 
-  return loading || stories === null ? (
+  return loading ? (
     <Spinner />
   ) : (
     <div className="Stories text-center">
@@ -22,7 +22,6 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
           ))}
         </div>
       ) : null}
-      ]
     </div>
   );
 };
