@@ -7,10 +7,10 @@ import "./Stories.scss";
 
 const Stories = ({ getStories, stories: { stories, loading } }) => {
   useEffect(() => {
-    // getStories();
+    getStories();
   }, []);
 
-  return loading ? (
+  return loading || stories === null ? (
     <Spinner />
   ) : (
     <div className="Stories text-center">
@@ -22,6 +22,7 @@ const Stories = ({ getStories, stories: { stories, loading } }) => {
           ))}
         </div>
       ) : null}
+      ]
     </div>
   );
 };
