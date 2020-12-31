@@ -100,7 +100,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span>
+            <i style={{ color: "#a80c03" }} class="fas fa-bars"></i>
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}

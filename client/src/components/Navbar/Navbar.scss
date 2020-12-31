@@ -36,6 +36,10 @@
     outline: none !important;
   }
 
+  button.navbar-toggler.collapsed {
+    border: none;
+  }
+
   @media screen and (max-width: 425px) {
     a.nav-link {
       font-size: 0.9rem;
