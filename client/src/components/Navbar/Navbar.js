@@ -101,7 +101,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           aria-label="Toggle navigation"
         >
           <span>
-            <i style={{ color: "#a80c03" }} class="fas fa-bars"></i>
+            <i style={{ color: "#a80c03" }} className="fas fa-bars"></i>
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
