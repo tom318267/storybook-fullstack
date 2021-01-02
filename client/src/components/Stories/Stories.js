@@ -8,7 +8,7 @@ import "./Stories.scss";
 const Stories = ({ getStories, stories: { stories, loading } }) => {
   useEffect(() => {
     getStories();
-  }, [stories, loading]);
+  }, []);
 
   return loading ? (
     <Spinner />
