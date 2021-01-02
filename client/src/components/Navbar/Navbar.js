@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../../actions/auth";
 
@@ -13,31 +14,31 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </a>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link"
-          href="/add-story"
+          to="/add-story"
           data-target=".navbar-collapse.show"
         >
           Share Story
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link"
-          href="/stories"
+          to="/stories"
           data-target=".navbar-collapse.show"
         >
           Story Feed
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link disabled"
-          href="/contact"
+          to="/contact"
           data-target=".navbar-collapse.show"
         >
           Contact
-        </a>
+        </Link>
       </li>
       <li onClick={logout} className="nav-item">
         <a href="#!" className="nav-link" data-target=".navbar-collapse.show">
@@ -50,36 +51,36 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul className="navbar-nav ml-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="/" data-target=".navbar-collapse.show">
+        <Link className="nav-link" to="/" data-target=".navbar-collapse.show">
           Home <span className="sr-only">(current)</span>
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link"
-          href="/add-story"
+          to="/add-story"
           data-target=".navbar-collapse.show"
         >
           Share Story
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link disabled"
-          href="/contact"
+          to="/contact"
           data-target=".navbar-collapse.show"
         >
           Contact
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link"
-          href="/login"
+          to="/login"
           data-target=".navbar-collapse.show"
         >
           Login
-        </a>
+        </Link>
       </li>
     </ul>
   );
