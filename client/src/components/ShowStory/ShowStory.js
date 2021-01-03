@@ -24,7 +24,7 @@ const ShowStory = ({
 }) => {
   useEffect(() => {
     getStory(match.params.id);
-  }, [getStory, match.params.id]);
+  }, [match.params.id]);
 
   return story ? (
     <div className="ShowStory text-center">
@@ -49,14 +49,24 @@ const ShowStory = ({
         {story.user._id !== user.user._id && (
           <div className="like-dislike-comment">
             <button
-              onClick={() => addLike(story._id)}
+              onClick={() => {
+                addLike(story._id);
+                setTimeout(() => {
+                  getStory(story._id);
+                }, 200);
+              }}
               className="btn btn-primary"
             >
               <i className="fas fa-thumbs-up"></i>
               {story.likes.length > 0 && <span> {story.likes.length}</span>}
             </button>
             <button
-              onClick={() => removeLike(story._id)}
+              onClick={() => {
+                removeLike(story._id);
+                setTimeout(() => {
+                  getStory(story._id);
+                }, 200);
+              }}
               className="btn btn-primary"
             >
               <i className="fas fa-thumbs-down"></i>

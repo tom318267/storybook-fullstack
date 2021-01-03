@@ -56,13 +56,15 @@ export const storyReducer = (state = initialState, action) => {
         loading: false,
       };
     case UPDATE_LIKES:
+      const updatedStories = state.stories.map((story) =>
+        story._id === action.payload.storyId
+          ? { ...story, likes: action.payload.likes }
+          : story
+      );
+      debugger;
       return {
         ...state,
-        stories: state.stories.map((story) =>
-          story._id === action.payload.storyId
-            ? { ...story, likes: action.payload.likes }
-            : story
-        ),
+        stories: updatedStories,
         loading: false,
       };
     case ADD_COMMENT:

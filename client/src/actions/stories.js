@@ -104,7 +104,7 @@ export const addLike = (storyId) => async (dispatch) => {
 
     dispatch({
       type: UPDATE_LIKES,
-      payload: { storyId, likes: res.data.likes },
+      payload: { storyId, likes: res.data },
     });
   } catch (err) {
     dispatch({

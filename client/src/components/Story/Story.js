@@ -1,9 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
+import { addLike } from "../../actions/stories";
 import "./Story.scss";
 
-const Story = ({ story: { title, body, _id } }) => {
+const Story = ({ addLike, story: { title, body, _id } }) => {
   return (
     <div className="Story bg-light mb-3">
       <div className="card-header">
@@ -24,4 +26,4 @@ const Story = ({ story: { title, body, _id } }) => {
   );
 };
 
-export default Story;
+export default connect(null, { addLike })(Story);
