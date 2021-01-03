@@ -124,7 +124,7 @@ router.delete("/:id", auth, async (req, res) => {
 router.put("/like/:id", auth, async (req, res) => {
   try {
     const story = await Story.findById(req.params.id);
-    console.log(story);
+
     // Check if story has already been liked
     if (
       story.likes.filter((like) => like.user.toString() === req.user.id)

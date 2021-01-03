@@ -59,7 +59,7 @@ export const storyReducer = (state = initialState, action) => {
       return {
         ...state,
         stories: state.stories.map((story) =>
-          story._id === action.payload.id
+          story._id === action.payload.storyId
             ? { ...story, likes: action.payload.likes }
             : story
         ),

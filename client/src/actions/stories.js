@@ -98,15 +98,16 @@ export const deleteStory = (id) => async (dispatch) => {
 };
 
 // Add like
-export const addLike = (id) => async (dispatch) => {
+export const addLike = (storyId) => async (dispatch) => {
   try {
-    const res = await axios.put(`/stories/like/${id}`);
+    const res = await axios.put(`/stories/like/${storyId}`);
 
     dispatch({
       type: UPDATE_LIKES,
-      payload: { id, likes: res.data.likes },
+      payload: { storyId, likes: res.data.likes },
     });
-    window.location = `/stories/${id}`;
+
+    window.location.reload({ forceReload: false });
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
@@ -116,16 +117,16 @@ export const addLike = (id) => async (dispatch) => {
 };
 
 // Remove like
-export const removeLike = (id) => async (dispatch) => {
+export const removeLike = (storyId) => async (dispatch) => {
   try {
-    const res = await axios.put(`/stories/unlike/${id}`);
+    const res = await axios.put(`/stories/unlike/${storyId}`);
 
     dispatch({
       type: UPDATE_LIKES,
-      payload: { id, likes: res.data },
+      payload: { storyId, likes: res.data },
     });
 
-    window.location = `/stories/${id}`;
+    window.location.reload({ forceReload: false });
   } catch (err) {
     dispatch({
       type: STORY_ERROR,

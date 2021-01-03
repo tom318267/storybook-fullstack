@@ -32,7 +32,7 @@ const AddStory = ({ addStory }) => {
   return (
     <div className="AddStory">
       <h2>
-        <i class="fas fa-book"></i> Share Story
+        <i className="fas fa-book"></i> Share Story
       </h2>
       <p className="lead">Tell us your story!</p>
       <form onSubmit={(e) => onSubmit(e)}>
