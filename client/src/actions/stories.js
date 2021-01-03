@@ -106,8 +106,6 @@ export const addLike = (storyId) => async (dispatch) => {
       type: UPDATE_LIKES,
       payload: { storyId, likes: res.data.likes },
     });
-
-    window.location.reload({ forceReload: false });
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
@@ -125,8 +123,6 @@ export const removeLike = (storyId) => async (dispatch) => {
       type: UPDATE_LIKES,
       payload: { storyId, likes: res.data },
     });
-
-    window.location.reload({ forceReload: false });
   } catch (err) {
     dispatch({
       type: STORY_ERROR,
