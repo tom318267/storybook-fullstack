@@ -8,7 +8,7 @@ const User = require("../models/User");
 // @route GET /stories
 // @desc  Show all stories
 // @access Private
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
     const stories = await Story.find().sort({ date: -1 });
     res.json(stories);

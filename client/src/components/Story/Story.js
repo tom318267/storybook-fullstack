@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import TextTruncate from "react-text-truncate";
 import "./Story.scss";
 
@@ -18,6 +17,7 @@ const Story = ({ story: { title, body, _id } }) => {
           truncateText="..."
           text={body}
         />
+
         <Link to={`/stories/${_id}`}>Read more</Link>
       </div>
     </div>
