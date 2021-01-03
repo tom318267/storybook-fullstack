@@ -40,12 +40,13 @@
     border: none;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 991px) {
     a.nav-link {
       font-size: 0.9rem;
+      border: none;
 
       &:hover {
-        border: none;
+        border-bottom: unset;
       }
     }
   }
